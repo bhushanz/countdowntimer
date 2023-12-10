@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body,.main{
+    width: 100%;
+    min-height: 100vh;
+   background-image: url(img/1279088.jpg);
+   background-repeat: no-repeat;
+   background-size:cover;
+   background-position: center;
+    color: rgb(255, 255, 255);  
+    position: relative;
+   
+}
+.logo{
+    position: absolute;
+    left: 0px;
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    font-size: 11px;
+}
+.logo img {
+    height:60px;
+    width: 40px;
+    margin: auto 10px;
+}
+h1{
+    font-family: 'Merriweather', serif;
+    font-variant:small-caps;
+    display: block;
+    -webkit-text-stroke: 1px rgb(59, 38, 0);
+    position: relative;
+    background-image: linear-gradient(to right, rgb(154, 56, 56) , rgb(252, 252, 252));
+      -webkit-background-clip: text;
+      color: transparent;
+}
+.heading{
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+.overlay{
+    min-height:100vh;
+    width:100%;
+    display: flex;
+    position: relative;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(94, 43, 43, 0.288);
+}
+.marvel{
+    margin-top: 0px;
+    height: 200px;
+    width: 387px;
+}
+.date{
+    font-size: 35px;
+    font-variant: small-caps;
+    background-image: linear-gradient(to bottom, rgb(47, 41, 41) , white);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.timer{
+    margin-top: 10px;
+    width:500px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+input{
+    height:55px;
+    width: 80px;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    font-size: 22px;
+    border-radius: 20px;
+    border: none;
+    margin: 8px 0px ;
+    background-image: linear-gradient(45deg, rgb(46, 19, 19) , white);
+}
+label{
+    font-family: 'Merriweather', serif;
+    font-size: 19px;
+    font-variant: small-caps;
+    
+}
+.name{
+    margin-top: 10px;
+    font-size: 40px;
+    font-family: 'Merriweather', serif;
+    font-variant:small-caps;
+    display: block;
+    font-weight: bold;
+    background-image: linear-gradient(to top, rgb(255, 255, 255) , rgb(70, 70, 70));
+    -webkit-background-clip: text;
+    color: transparent;
+    text-align: center;
+    -webkit-text-stroke: 1px  rgb(69, 42, 42);
+}
+span{
+    font-weight: 900;
+    background-image: linear-gradient(to bottom, rgb(0, 0, 0) , rgb(63, 51, 51));
+    -webkit-background-clip: text;
+    color: transparent;
+}
+ video{
+    height: 300px;
+    border: none;
+    border-radius: 20px;
+}
+.photo{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    animation: move 10s ease-in-out  ;
+   animation-iteration-count: 1;
+   animation-delay: 2s;
+}
+.photo img{
+    width: 100%;
+    height: 620px;
+}
+@keyframes move {
+    from {
+        transform: translateY(-600px);
+    }
+    to{
+        transform: translateY( 0px) ;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .overlay{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+        text-align: center;
+    }
+    .heading{
+        font-size: 24px;
+    }
+    .photo{
+        display: none;
+    }
+
+    .timer{
+       display: flex;
+       justify-content: space-evenly;
+       width: 100%;
+    }
+    .videoPlay{
+        width: 100%;
+        display: flex;
+         justify-content: center;
+    }
+    video{
+        width: 88%;
+        border-radius:20px;
+        margin-bottom: 20px; 
+    }
+    
+}
